@@ -1,0 +1,52 @@
+.order-tracking {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.step .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #fff;
+    background-color: #ccc;
+    transition: background-color 0.3s;
+}
+
+.step.active .circle {
+    background-color: #000;
+}
+
+.step.completed .circle {
+    background-color: #000;
+}
+
+.step .label {
+    padding-inline: 10px;
+}
+
+.connector {
+    height: 2px;
+    background-color: #ccc;
+    flex: 1;
+}
+
+.step.active ~ .connector {
+    background-color: #000;
+}
+
+.step.inactive ~ .connector {
+    background-color: #ccc;
+}
